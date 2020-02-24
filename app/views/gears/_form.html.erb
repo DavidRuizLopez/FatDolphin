@@ -1,0 +1,8 @@
+<%= simple_form_for (gear) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :price %>
+  <%= f.input :description %>
+  <%= f.input :type %>
+
+  <%= f.submit "Add Equipment", class: "btn btn-primary" %>
+<% end %>
