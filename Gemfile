@@ -21,9 +21,11 @@ gem 'faker'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
+
 end
 
 group :development, :test do
+  gem 'dotenv-rails'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'listen', '~> 3.0.5'
