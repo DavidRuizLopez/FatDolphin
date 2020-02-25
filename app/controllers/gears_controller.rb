@@ -12,7 +12,6 @@ class GearsController < ApplicationController
   # end
 
   def index
-
     if params[:button] && params[:query] != "" && Gear.categories.include?(params[:query])
       @gears = Gear.all.select { |gear| gear.category.downcase.include?(params[:query].downcase) }
     elsif params[:button] && params[:query] != ""
