@@ -3,7 +3,6 @@ class GearsController < ApplicationController
   before_action :set_gear, only: [:show, :edit]
 
 
-  # For when the searh bar is implemented
   # def index
   #   if params[:search] && params[:search][:query] != ""
   #     @gears = Gear.all.select { |gear| gear.name.downcase == params[:search][:query].downcase }
@@ -11,6 +10,17 @@ class GearsController < ApplicationController
   #     @gears = Gear.all
   #   end
   # end
+
+  def index
+
+    if params[:button] && params[:query] != "" && Gear.categories.include?(params[:query])
+      @gears = Gear.all.select { |gear| gear.category.downcase.include?(params[:query].downcase) }
+    elsif params[:button] && params[:query] != ""
+      @gears = Gear.all.select { |gear| gear.name.downcase.include?(params[:query].downcase) }
+    else
+      @gears = Gear.all
+    end
+  end
 
   def show
     set_gear
@@ -22,8 +32,9 @@ class GearsController < ApplicationController
 
   def create
     @gear = Gear.new(gear_params)
+    @gear.user = current_user
     if @gear.save
-      redirect_to new_gear_dose_path(@gear)
+      redirect_to gear_path(@gear)
     else
       render :new
     end
