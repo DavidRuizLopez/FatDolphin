@@ -1,9 +1,11 @@
-<%= simple_form_for (gear) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :price %>
-  <%= f.input :description %>
-  <%= f.input :category, :collection => Gear.categories%>
-  <%= f.input :photo, as: :file %>
+<div class="m-5">
+  <%= simple_form_for (gear) do |f| %>
+    <%= f.input :name, class: "d-flex justify-content-center" %>
+    <%= f.input :price %>
+    <%= f.input :description %>
+    <%= f.input :category, :collection => Gear.categories%>
+    <%= f.input :photo, as: :file %>
 
-  <%= f.submit "Add Equipment", class: "btn btn-primary" %>
-<% end %>
+    <%= f.submit "Add Equipment", class: "btn btn-primary" %>
+  <% end %>
+</div>
