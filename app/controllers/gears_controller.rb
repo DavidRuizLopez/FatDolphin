@@ -1,5 +1,5 @@
 class GearsController < ApplicationController
-
+  skip_before_action :authenticate_user!, only: [:home, :index, :show]
   before_action :set_gear, only: [:show, :edit]
 
 
