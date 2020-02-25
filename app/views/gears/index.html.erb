@@ -2,6 +2,7 @@
 <h2>Index page (under construction)</h2>
 <%= params[:query] %>
 
+<% if @gears != []  %>
 <div class="cards">
     <div class="row row-cols-1 row-cols-md-3 justify-content-center" >
       <% @gears.each do |gear| %>
@@ -19,3 +20,6 @@
 
   </div>
 </div>
+<% else %>
+<p>no hay na</p>
+<% end %>

@@ -8,7 +8,6 @@ class Gear < ApplicationRecord
   validates :user_id , presence: true
   validates :price , presence: true
 
-
   def self.categories
     ['camera', 'tripods', 'lents']
   end
