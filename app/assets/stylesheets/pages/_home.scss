@@ -30,9 +30,32 @@ padding-top: 100px;
 
 }
 
-.fa-search{
-  padding: 9px;
+.search-btn{
+  background-color: black;
 }
+
+.fa-search{
+  padding: 10px;
+  color: white;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 70px;
+  text-align: center;
+}
+
+.icon-card i {
+  font-size: 36px;
+}
+
+.explore {
+  margin-top: 70px;
+}
+
 .cards-container {
   display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
 }
