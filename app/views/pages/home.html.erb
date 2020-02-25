@@ -1,4 +1,4 @@
-<%= render "shared/navbar" %>
+
 <div class="banner">
   <div class="container">
     <h1> Convenient access to all filming equipment </h1>
@@ -16,11 +16,41 @@
     </div>
   </div>
 </div>
-<div class="cards-container">
-<%= render "shared/card" %>
-<%= render "shared/card" %>
-<%= render "shared/card" %>
-<%= render "shared/card" %>
+
+<div class="container">
+  <div class="icons">
+    <div class="icon-card">
+      <p><i class="fas fa-thumbs-up"></i></p>
+      <div class="icon-text">
+        <p><strong>Access More</strong></p>
+        <p>Pursue you're dreams</p>
+      </div>
+    </div>
+      <div class="icon-card">
+      <p><i class="fas fa-donate"></i></p>
+      <div class="icon-text">
+        <p><strong>Save money</strong></p>
+        <p>Buy less. Rent for a fraction of the cost</p>
+      </div>
+    </div>
+    <div class="icon-card">
+      <p><i class="fab fa-envira"></i></p>
+      <div class="icon-text">
+        <p><strong>Help the planet</strong></p>
+        <p>Live lighter. Reduce waste</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="explore">
+    <h2>Explore Categories</h2>
+    <div class="cards-container">
+      <%= render "shared/card" %>
+      <%= render "shared/card" %>
+      <%= render "shared/card" %>
+      <%= render "shared/card" %>
+    </div>
+  </div>
 </div>
 
 

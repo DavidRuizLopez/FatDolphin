@@ -7,11 +7,13 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= stylesheet_pack_tag 'application' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Subrayada|Roboto&display=swap" rel="stylesheet">
 
   </head>
   <body>
+    <%= render "shared/navbar" %>
     <%= render 'shared/notification' %>
     <%= yield %>
     <%= javascript_include_tag 'application' %>
