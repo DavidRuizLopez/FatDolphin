@@ -52,10 +52,26 @@ padding-top: 100px;
 
 .explore {
   margin-top: 70px;
+  text-align: center;
+}
+
+.search-bar form {
+  display: flex;
+  width: 100%;
 }
 
 .cards-container {
   display: flex;
   justify-content: space-between;
   margin-top: 70px;
+
+  a {
+    text-decoration: none;
+    &:hover {
+      opacity: 0.5;
+      transition: ease 0.3s;
+    }
+
+  }
 }
+

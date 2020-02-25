@@ -3,11 +3,10 @@
   <div class="container">
     <h1> Convenient access to all filming equipment </h1>
     <p> Rent what you need when you need it. </p>
-    <div class="search-bars">
+    <div class="search-bar">
       <%= form_tag gears_path, method: :get do %>
         <%= text_field_tag :query,
           params[:query],
-          # class: "form-control",
           placeholder: "Search for equipment", class: "input-query"%>
         <%= button_tag(type: "submit", class: "search-btn") do %>
             <i class="fas fa-search"></i>
@@ -18,37 +17,61 @@
 </div>
 
 <div class="container">
+
   <div class="icons">
-    <div class="icon-card">
-      <p><i class="fas fa-thumbs-up"></i></p>
-      <div class="icon-text">
-        <p><strong>Access More</strong></p>
-        <p>Pursue you're dreams</p>
-      </div>
-    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="icon-card">
-      <p><i class="fas fa-donate"></i></p>
-      <div class="icon-text">
-        <p><strong>Save money</strong></p>
-        <p>Buy less. Rent for a fraction of the cost</p>
+        <p><i class="fas fa-thumbs-up"></i></p>
+        <div class="icon-text">
+          <p><strong>Access More</strong></p>
+          <p>Pursue you're dreams</p>
+        </div>
       </div>
     </div>
-    <div class="icon-card">
-      <p><i class="fab fa-envira"></i></p>
-      <div class="icon-text">
-        <p><strong>Help the planet</strong></p>
-        <p>Live lighter. Reduce waste</p>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="icon-card">
+        <p><i class="fas fa-donate"></i></p>
+        <div class="icon-text">
+          <p><strong>Save money</strong></p>
+          <p>Buy less. Rent for a fraction of the cost</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="icon-card">
+        <p><i class="fab fa-envira"></i></p>
+        <div class="icon-text">
+          <p><strong>Help the planet</strong></p>
+          <p>Live lighter. Reduce waste</p>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="explore">
-    <h2>Explore Categories</h2>
+    <h2>- Popular Categories -</h2>
     <div class="cards-container">
-      <%= render "shared/card" %>
-      <%= render "shared/card" %>
-      <%= render "shared/card" %>
-      <%= render "shared/card" %>
+      <%=link_to gears_path(:query => "cameras"), style:'text-decoration: none;' do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1546687952-19182f36efe6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=357&q=80)">
+        Cameras
+        </div>
+      <% end %>
+      <%=link_to gears_path(:query => "cameras"), style:'text-decoration: none;' do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://res.cloudinary.com/dvdrzlpz/image/upload/v1582649942/90-angle-W9RHcD0J44Q-unsplash_jita8a.jpg)">
+          Lenses
+        </div>
+      <% end %>
+      <%=link_to gears_path(:query => "cameras"), style:'text-decoration: none;' do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://res.cloudinary.com/dvdrzlpz/image/upload/v1582650148/skye-studios-rjmSbF6TQvQ-unsplash_bcmwtc.jpg)">
+          Drones
+        </div>
+      <% end %>
+      <%=link_to gears_path(:query => "cameras"), style:'text-decoration: none;' do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://images.unsplash.com/photo-1553288569-8d3d4e12fb02?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80)">
+          Tripods
+        </div>
+      <% end %>
+
     </div>
   </div>
 </div>
