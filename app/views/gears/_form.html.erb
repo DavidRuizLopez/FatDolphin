@@ -2,7 +2,7 @@
   <%= f.input :name %>
   <%= f.input :price %>
   <%= f.input :description %>
-  <%= f.input :type %>
+  <%= f.input :category, :collection => Gear.categories%>
 
   <%= f.submit "Add Equipment", class: "btn btn-primary" %>
 <% end %>
