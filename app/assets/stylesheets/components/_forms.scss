@@ -1,0 +1,18 @@
+
+.form-group {
+    display: flex;
+    background: dimgrey;
+    color: white;
+    border-radius: 2px;
+}
+
+label {
+    display: flex;
+    padding: 0px 10px;
+    align-items: center;
+}
+
+.form-group.file.optional.gear_photo.form-group-valid {
+    background: transparent;
+    color: black;
+}
