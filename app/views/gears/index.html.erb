@@ -1,11 +1,11 @@
 <% if @gears != []  %>
   <h1>See our list of <%= params[:query] %></h1>
 
-  <div class="cards">
-      <div class="row row-cols-1 row-cols-md-3 justify-content-center" >
+  <div class="cards m-3">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 justify-content-center" >
         <% @gears.each do |gear| %>
               <%= link_to gear_path(gear) do %>
-              <div class="card mb-3">
+              <div class="card m-3">
                 <img class="card-img-top" src="https://images.unsplash.com/photo-1518353053542-7ea33d942319?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title"> <%= gear.name %> </h5>
