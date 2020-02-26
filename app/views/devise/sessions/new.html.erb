@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row d-flex justify-content-center my-5 py-5 login-box">
-    <div class="col-md-6">
+    <div class="col-md-6 border rounded py-4 px-5 shadow">
       <h4 class="text-center mb-4">Log in</h2>
 
       <%= simple_form_for(resource, html: { class: 'form-horizontal' }, wrapper: :horizontal_form, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -12,7 +12,7 @@
                     required: false,
                     input_html: { autocomplete: "current-password" } %>
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-        <button type="button" class="btn btn-danger btn-sm btn-block"><%= f.button :submit, "Log in" %></button>
+        <%= f.button :submit, "Log in", class: 'btn btn-danger btn-sm btn-block' %>
       <% end %>
       <div class="my-3 py-3 border-top">
         <%= render "devise/shared/links" %>
