@@ -3,24 +3,23 @@
 background-image: url('https://res.cloudinary.com/dvdrzlpz/image/upload/v1582644728/gear1_liwb3f.jpg');
 background-size: cover;
 background-position: center;
-height: 560px;
+height: 600px;
 padding-top: 100px;
+  p {
+  font-size: 20px;
+  color: black;
+  opacity: 0.8;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
 }
 
-.banner h1 {
+h1 {
   margin: 0;
   color: black;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
   font-weight: bold;
-}
-
-.banner p {
-  font-size: 20px;
-  color: black;
-  opacity: 0.8;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .input-query{
@@ -39,23 +38,60 @@ padding-top: 100px;
   color: white;
 }
 
+.container-home {
+  background-color: white;
+}
+
 .icons {
   display: flex;
   justify-content: space-around;
-  margin-top: 70px;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 90px;
   text-align: center;
 }
 
-.icon-card i {
-  font-size: 36px;
+.icon-card {
+  margin-bottom: 70px;
+  i {
+    margin-bottom:20px;
+    font-size: 25px;
+  }
+  p{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
-.explore {
-  margin-top: 70px;
+.popular {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.search-bar form {
+  display: flex;
+  width: 100%;
 }
 
 .cards-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 70px;
+  margin-bottom: 50px;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+
+  .card-category{
+    margin-bottom: 50px;
+  }
+
+  a {
+    text-decoration: none;
+    &:hover {
+      opacity: 0.4;
+      transition: ease 0.3s;
+    }
+  }
 }
+
