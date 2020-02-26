@@ -11,4 +11,15 @@
 .sticky-details {
   position: sticky;
   top: 0;
+  font-size: 14px;
+}
+#price {
+  font-size: 20px;
+}
+.review-info {
+  display: flex;
+  justify-content: flex-start;
+}
+.user-info {
+  font-size: 14px;
 }
