@@ -7,7 +7,7 @@
       <%= form_tag gears_path, method: :get do %>
         <%= text_field_tag :query,
           params[:query],
-          placeholder: "Search for equipment", class: "input-query"%>
+          placeholder: "  Search for equipment", class: "input-query"%>
         <%= button_tag(type: "submit", class: "search-btn") do %>
             <i class="fas fa-search"></i>
         <% end %>
@@ -19,14 +19,14 @@
 <div class="container">
 
   <div class="icons">
-    <div class="col-xs-12 col-sm-6 col-md-3">
+    <div class="col-sm-1 col-md-3">
       <div class="icon-card">
         <p><i class="fas fa-thumbs-up"></i></p>
           <p><strong>Access More</strong></p>
           <p>Pursue you're dreams.</p>
       </div>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-3">
+    <div class="col-sm-1 col-md-3">
       <div class="icon-card">
         <p><i class="fab fa-envira"></i></p>
         <div class="icon-text">
@@ -35,7 +35,7 @@
         </div>
       </div>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-3">
+    <div class="col-sm-1 col-md-3">
       <div class="icon-card">
         <p><i class="fas fa-donate"></i></p>
         <div class="icon-text">
@@ -69,7 +69,6 @@
           Tripods
         </div>
       <% end %>
-
     </div>
   </div>
 </div>
