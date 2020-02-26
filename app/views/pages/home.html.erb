@@ -22,9 +22,16 @@
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="icon-card">
         <p><i class="fas fa-thumbs-up"></i></p>
-        <div class="icon-text">
           <p><strong>Access More</strong></p>
-          <p>Pursue you're dreams</p>
+          <p>Pursue you're dreams.</p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="icon-card">
+        <p><i class="fab fa-envira"></i></p>
+        <div class="icon-text">
+          <p><strong>Help the planet</strong></p>
+          <p>Live lighter. Reduce waste.</p>
         </div>
       </div>
     </div>
@@ -33,40 +40,31 @@
         <p><i class="fas fa-donate"></i></p>
         <div class="icon-text">
           <p><strong>Save money</strong></p>
-          <p>Buy less. Rent for a fraction of the cost</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="icon-card">
-        <p><i class="fab fa-envira"></i></p>
-        <div class="icon-text">
-          <p><strong>Help the planet</strong></p>
-          <p>Live lighter. Reduce waste</p>
+          <p>Be cost effective.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="explore">
-    <h2>- Popular Categories -</h2>
+  <div class="popular">
+    <h1>- Popular Categories -</h1>
     <div class="cards-container">
       <%=link_to gears_path(:query => "cameras"), style:'text-decoration: none;' do %>
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1546687952-19182f36efe6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=357&q=80)">
         Cameras
         </div>
       <% end %>
-      <%=link_to gears_path(:query => "cameras"), style:'text-decoration: none;' do %>
+      <%=link_to gears_path(:query => "lenses"), style:'text-decoration: none;' do %>
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://res.cloudinary.com/dvdrzlpz/image/upload/v1582649942/90-angle-W9RHcD0J44Q-unsplash_jita8a.jpg)">
           Lenses
         </div>
       <% end %>
-      <%=link_to gears_path(:query => "cameras"), style:'text-decoration: none;' do %>
+      <%=link_to gears_path(:query => "drones"), style:'text-decoration: none;' do %>
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://res.cloudinary.com/dvdrzlpz/image/upload/v1582650148/skye-studios-rjmSbF6TQvQ-unsplash_bcmwtc.jpg)">
           Drones
         </div>
       <% end %>
-      <%=link_to gears_path(:query => "cameras"), style:'text-decoration: none;' do %>
+      <%=link_to gears_path(:query => "tripods"), style:'text-decoration: none;' do %>
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://images.unsplash.com/photo-1553288569-8d3d4e12fb02?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80)">
           Tripods
         </div>
