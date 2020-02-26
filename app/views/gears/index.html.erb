@@ -1,6 +1,8 @@
 
 <div class="container">
-    <%= render 'shared/search-bar', class:"ml-auto mr-auto" %>
+  <div class="d-flex justify-content-center">
+    <%= render 'shared/search-bar' %>
+  </div>
 <% if @gears != []  %>
   <h4 class="text-center">See our list of <%= params[:query] %></h4>
 
