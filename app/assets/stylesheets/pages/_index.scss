@@ -1,2 +1,15 @@
 // Import page-specific CSS files here.
 @import "home";
+
+a:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+h6 {
+  color: #000000;
+}
+
+.camera-description{
+  color: grey;
+}
