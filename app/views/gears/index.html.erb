@@ -12,7 +12,8 @@
                   <img class="card-img-top" src="https://images.unsplash.com/photo-1518353053542-7ea33d942319?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" alt="Card image cap">
                 <% end %>
                 <div class="card-body">
-                  <h5 class="card-title"> <%= gear.name %> </h5>
+                  <h6 class="card-title"> <%= gear.name %> </h6>
+                  <p class="camera-description"> <%= gear.description %></p>
                   <p class="price text-right"> $<%= gear.price %> </p>
                 </div>
               </div>
@@ -24,8 +25,10 @@
   </div>
 
 <% else %>
-  <p>Sorry! but <%= params[:query] %> is not one of our categories!</p>
-<% end %>
-
-<%= link_to "Go back", root_path, class: "btn"%>
+  <div class="error">
+  <p class="error-message">I'm Sorry! but <%= params[:query] %> is not one of our categories!</p>
+  <img src="https://res.cloudinary.com/dvdrzlpz/image/upload/v1582725914/1529054660_Ricki-Barlow-2015-WDW-Mike-Zahara_huqnck.jpg" alt="">
+  </div>
+  <%= link_to "Go back", root_path, class: "btn btn-error"%>
+  <% end %>
 
