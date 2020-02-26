@@ -7,7 +7,11 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="https://images.unsplash.com/photo-1488684430052-f2d92fb178c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80" alt="First slide">
+      <% if @gear.photo.attached? %>
+        <%= cl_image_tag @gear.photo.key, class:"d-block w-100" %>
+      <% else %>
+        <img class="d-block w-100" src="https://images.unsplash.com/photo-1488684430052-f2d92fb178c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80" alt="First slide">
+        <% end %>
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="https://images.unsplash.com/photo-1542908945-2d06f969cc61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1086&q=80" alt="Second slide">
@@ -32,11 +36,8 @@
   <div class="row py-4">
     <!-- LEFT SIDE DETAILS -->
     <div class="col-lg-8 col-sm-12">
-      <h4 class="border-bottom"><%= @gear.name %></h4>
-      <p><%= @gear.description %> <br><br>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga totam tempore molestias nisi repudiandae suscipit explicabo vitae odio labore ipsa excepturi, incidunt dolorem unde neque commodi veritatis reiciendis quis optio quia! Voluptates tempore nulla iusto, deserunt eligendi reprehenderit, ratione incidunt harum, voluptatum reiciendis, qui aliquam dignissimos omnis nihil libero voluptatibus.</p>
-      <p class="border-bottom pb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit amet reiciendis ducimus debitis, eius, saepe enim delectus modi commodi optio perferendis eum itaque, odio impedit quo. Expedita animi eos harum consequatur porro, aut. Delectus est modi repellendus corporis maiores eveniet! Exercitationem maiores sequi sapiente excepturi, fuga facilis consectetur quis quos?</p>
-
+      <h4 class="border-bottom"><%= @gear.name %></h4> <br><br>
+      <p class="border-bottom pb-3"><%= @gear.description %> <br><br>
       <h4 class="mt-5">Reviews</h4>
       <p class="border-bottom py-2"><i class="fas fa-star"></i> 4.68 | 123 reviews</p>
       <div class="review-info">
