@@ -23,6 +23,7 @@ class GearsController < ApplicationController
 
   def show
     set_gear
+    @rent = Rent.new
   end
 
   def new
