@@ -3,16 +3,7 @@
   <div class="container">
     <h1> Convenient access to all filming equipment </h1>
     <p> Rent what you need when you need it. </p>
-    <div class="search-bar">
-      <%= form_tag gears_path, method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
-          placeholder: "  Search for equipment", class: "input-query"%>
-        <%= button_tag(type: "submit", class: "search-btn") do %>
-            <i class="fas fa-search"></i>
-        <% end %>
-      <% end %>
-    </div>
+    <%= render 'shared/search-bar' %>
   </div>
 </div>
 

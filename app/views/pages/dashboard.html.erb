@@ -1,0 +1,39 @@
+
+
+<!-- show my gear  -->
+<h3>Check how your gear is doing!</h3>
+<div class="card-gear">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 justify-content-center border-bottom border-top" >
+        <% @user.gears.each do |gear| %>
+              <%= link_to gear_path(gear) do %>
+              <div class="card-trip m-3">
+                <% if gear.photo.attached? %>
+                  <%= cl_image_tag gear.photo.key, style:"object-fit: cover; height: 217.8px;" %>
+                <% else %>
+                  <img class="card-img-top" src="https://images.unsplash.com/photo-1518353053542-7ea33d942319?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" alt="Card image cap">
+                <% end %>
+                <div class="card-trip-infos">
+                  <h6 class="card-title"> <%= gear.name %> </h6>
+                  <h2 class="card-trip-pricing">€<%= gear.price %> </h2>
+                  <% if gear.available == true %>
+                    <p>available</p>
+                  <% else %>
+                    <p>not available</p>
+                  <% end %>
+                </div>
+              </div>
+              <% end %>
+        <% end %>
+      </div>
+
+    </div>
+
+<!-- End of my gear -->
+
+<!-- Show the gear currently hiring -->
+<h3>View the gear you are currently hiring!</h3>
+<p>you like it?</p>
+<p>like this one</p>
+<p>or this one</p>
+<p>one more</p>
+<p>that's all</p>
