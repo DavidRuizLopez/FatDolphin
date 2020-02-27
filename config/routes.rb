@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get 'dashboard', to: 'pages#dashboard'
+  get 'confirmation', to: 'pages#confirmation'
   resources :gears do
     resources :rents, only: [:destroy, :create]
     resources :reviews, only: [:index, :create, :new]
