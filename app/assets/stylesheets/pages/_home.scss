@@ -26,18 +26,30 @@ padding-top: 100px;
 }
 
 .input-query{
+  width: 650px;
   height: 40px;
-  width: 700px;
   opacity: 0.6;
   font-family: Lato;
   font-weight: 400;
   font-size: 15px;
+  border-radius: 4px;
+  border-style: groove;
 }
 
 
 .search-btn{
-  background-color: black;
+  background-color: #FE4A49;
+  margin-left: 5px;
+  width: 95px;
+
+  border: black;
+  border-radius: 4px;
 }
+
+  button:hover {
+    opacity: 0.7
+  }
+
 
 .fa-search{
   padding: 10px;

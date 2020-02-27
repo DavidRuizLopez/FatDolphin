@@ -1,7 +1,7 @@
 class RentsController < ApplicationController
-  def new
+  def create
   end
 
-  def create
+  def destroy
   end
 end
