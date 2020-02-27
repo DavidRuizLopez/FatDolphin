@@ -1,7 +1,7 @@
 class RentsController < ApplicationController
   def create
     @gear = Gear.find(params[:gear_id])
-    @rent = Rent.new(params.require(:rent).permit(:check_in, :check_out, :total_price))
+    @rent = Rent.new(params.require(:rent).permit(:check_in, :check_out)
     @rent.user = current_user
     @rent.gear = @gear
     @rent.total_price = maths(params[:rent][:check_in], @gear)
