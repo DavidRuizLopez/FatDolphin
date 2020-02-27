@@ -1,10 +1,13 @@
+
 <div class="container">
   <div class="row d-flex justify-content-center my-5 py-5 login-box">
     <div class="col-md-6 border rounded py-4 px-5 shadow">
       <h4 class="text-center mb-4">Sign Up</h2>
       <%= simple_form_for(resource, as: resource_name, html: { class: 'form-horizontal' }, wrapper: :horizontal_form, url: registration_path(resource_name)) do |f| %>
         <%= f.error_notification %>
-        <%= f.input :username %>
+        <%= f.input :username,
+                required: true,
+                autofocus: true %>
         <%= f.input :email,
                     required: true,
                     autofocus: true,
