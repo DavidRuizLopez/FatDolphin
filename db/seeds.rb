@@ -62,8 +62,6 @@ file_8 = URI.open("https://www.canon.es/media/EF_75-300mm_f4-5.6_III_Default_tcm
 gear_8 = Gear.create!(name: "Canon ef 75-300mm", price: 5, description: "I'll be back... with more of this ones because they are a-ma-zing!", category: "lenses", user: terminator, address: "Calle Embajadores 120")
 gear_8.photo.attach(io: file_8, filename: 'nes.jpg', content_type: 'image/jpg')
 
-
-
 fernando = User.create(username: "Fernando", email: "fernando@gmail.com", password: "123456")
 
 file_9 = URI.open("https://i.blogs.es/40eaf7/sony_a7iii_prueba-001/450_1000.jpg")

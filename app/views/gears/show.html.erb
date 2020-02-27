@@ -69,9 +69,9 @@
       <div class="sticky-details border rounded p-4">
         <p class="border-bottom"><span id="price"><%= @gear.price %></span> EUR / day</p>
         <p><strong>Dates</strong></p>
-        <%= simple_form_for :search, method: :get do |t| %>
-        <%= t.input :starts_at  , as: :string, input_html: { id: "start_date" } %>
-        <%= t.input :ends_at, as: :string, input_html: { id: "end_date"} %>
+        <%= simple_form_for [@gear, @rent], method: :post do |t| %>
+        <%= t.input :check_in  , as: :string, input_html: { id: "start_date" } %>
+        <%= t.input :check_out, as: :string, input_html: { id: "end_date"} %>
         <p><strong>Payment details</strong></p>
         <p class="border-bottom"><%= @gear.price %> EUR x <span id="days">1</span> day</p>
         <p class="border-bottom">Total: <span id="total-price">0</span> EUR</p>
