@@ -7,7 +7,7 @@ class RentsController < ApplicationController
     @rent.total_price = maths(params[:rent][:check_in], @gear)
     @gear.update(available: false)
     if @rent.save
-      redirect_to root_path
+      redirect_to confirmation_path
     else
       render "gears/show"
     end
