@@ -5,6 +5,5 @@ class PagesController < ApplicationController
 
   def dashboard
     @user = current_user
-    @gear = @user.gears.select { |gear| gear.available == true}
   end
 end

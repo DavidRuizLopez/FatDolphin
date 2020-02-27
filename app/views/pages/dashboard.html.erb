@@ -4,7 +4,7 @@
 <h3>Check how your gear is doing!</h3>
 <div class="card-gear">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 justify-content-center border-bottom border-top" >
-        <% @gears.each do |gear| %>
+        <% @user.gears.each do |gear| %>
               <%= link_to gear_path(gear) do %>
               <div class="card-trip m-3">
                 <% if gear.photo.attached? %>
@@ -15,6 +15,11 @@
                 <div class="card-trip-infos">
                   <h6 class="card-title"> <%= gear.name %> </h6>
                   <h2 class="card-trip-pricing">€<%= gear.price %> </h2>
+                  <% if gear.available == true %>
+                    <p>available</p>
+                  <% else %>
+                    <p>not available</p>
+                  <% end %>
                 </div>
               </div>
               <% end %>
