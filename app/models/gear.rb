@@ -1,6 +1,7 @@
 class Gear < ApplicationRecord
   belongs_to :user
   has_many :rents
+  has_many :reviews
   has_one_attached :photo
 
   validates :name , presence: true

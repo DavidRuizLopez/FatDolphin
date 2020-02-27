@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'pages#dashboard'
   resources :gears do
     resources :rents, only: [:destroy, :create]
+    resources :reviews, only: [:index, :create, :new]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
