@@ -4,6 +4,7 @@
     <%= f.input :price %>
     <%= f.input :description %>
     <%= f.input :category, :collection => Gear.categories%>
+    <%= f.input :address %>
     <%= f.input :photo, input_html: { class: 'hidden'} %>
     <%= image_tag "", width: 300, class: "show", id: "photo-preview" %>
 
