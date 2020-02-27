@@ -2,7 +2,6 @@ class GearsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_gear, only: [:show, :edit]
 
-
   # def index
   #   if params[:search] && params[:search][:query] != ""
   #     @gears = Gear.all.select { |gear| gear.name.downcase == params[:search][:query].downcase }
@@ -12,7 +11,7 @@ class GearsController < ApplicationController
   # end
 
   def index
-    if params[:button] && params[:query] != "" && Gear.categories.include?(params[:query])
+    if params[:button] && params[:query] != "" && Gear.all.categories.include?(params[:query])
       @gears = Gear.all.select { |gear| gear.category.downcase.include?(params[:query].downcase) }
     elsif params[:button] && params[:query] != ""
       @gears = Gear.all.select { |gear| gear.name.downcase.include?(params[:query].downcase) }
@@ -22,7 +21,16 @@ class GearsController < ApplicationController
   end
 
   def show
+    gears = Gear.geocoded
     set_gear
+    geocoded_gear = gears.where(id: params[:id])
+    @markers = geocoded_gear.map do |gear|
+      {
+        lat: gear.latitude,
+        lng: gear.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { gear: gear })
+      }
+    end
     @rent = Rent.new
   end
 
