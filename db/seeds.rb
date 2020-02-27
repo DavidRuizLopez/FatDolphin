@@ -82,13 +82,13 @@ gear_11.photo.attach(io: file_11, filename: 'nes.jpg', content_type: 'image/jpg'
 
 
 
-# natalie = User.create(username: "Natalie", email: "natalie@gmail.com", password: "123456")
+natalie = User.create(username: "Natalie", email: "natalie@gmail.com", password: "123456")
 
-# file_12 = URI.open("https://static.bhphoto.com/images/images2500x2500/1382572231_1010691.jpg")
-# gear_12 = Gear.create!(name: "Manfrotto 190XPro4", price: 15, description: "This thing can hold an elephant!", category: "tripods", user: natalie)
-# gear_12.photo.attach(io: file_12, filename: 'nes.jpg', content_type: 'image/jpg')
+file_12 = URI.open("https://static.bhphoto.com/images/images2500x2500/1382572231_1010691.jpg")
+gear_12 = Gear.create!(name: "Manfrotto 190XPro4", price: 15, description: "This thing can hold an elephant!", category: "tripods", user: natalie, address: "Calle Embajadores")
+gear_12.photo.attach(io: file_12, filename: 'nes.jpg', content_type: 'image/jpg')
 
-# file_13 = URI.open("https://i1.wp.com/puntoracing.com/wp-content/uploads/2016/09/djimavicprofeat-800x420.jpg")
-# gear_13 = Gear.create!(name: "Mavic Pro 420", price: 45, description: "Best drone in the market, battery don't hold as much but image is great!.", category: "drones", user: natalie)
-# gear_13.photo.attach(io: file_13, filename: 'nes.jpg', content_type: 'image/jpg')
+file_13 = URI.open("https://i1.wp.com/puntoracing.com/wp-content/uploads/2016/09/djimavicprofeat-800x420.jpg")
+gear_13 = Gear.create!(name: "Mavic Pro 420", price: 45, description: "Best drone in the market, battery don't hold as much but image is great!.", category: "drones", user: natalie, address: "Calle Embajadores")
+gear_13.photo.attach(io: file_13, filename: 'nes.jpg', content_type: 'image/jpg')
 
