@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'pages#dashboard'
   get 'confirmation', to: 'pages#confirmation'
   resources :gears do
-    resources :rents, only: [:destroy, :create]
+    resources :rents, only: [:destroy, :create, :update]
     resources :reviews, only: [:index, :create, :new]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

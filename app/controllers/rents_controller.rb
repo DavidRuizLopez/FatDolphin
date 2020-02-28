@@ -16,7 +16,17 @@ class RentsController < ApplicationController
   def destroy
     @rent = Rent.find(params[:id])
     @rent.destroy
-    redirect_to root_path
+    @gear = Gear.find(params[:gear_id])
+    @gear.available = true
+    @gear.save
+    redirect_to dashboard_path
+  end
+
+  def update
+    @rent = Rent.find(params[:id])
+    @rent.request = true
+    @rent.save
+    redirect_to dashboard_path
   end
 
   private
