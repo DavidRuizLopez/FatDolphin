@@ -1,10 +1,28 @@
 .btn {
   border: none;
+  border-radius: 6px;
   background-color: #FE4A49;
   color: white;
-.btn:hover {
-  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-  opacity: 0.6px;
-  transition: 0.3s ease;
 }
+
+  .btn:hover {
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    transition: 0.1s ease;
+  }
+
+.btn-letters:hover{
+  color: white;
+}
+
+.btn-error {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px;
+    margin-top: 50px;
+    background: none;
+    color: #FE4A49;
+}
+
+.btn-error:hover{
+  color: black;
 }

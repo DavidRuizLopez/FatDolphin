@@ -49,12 +49,14 @@
     shadow: 10px;
     margin-bottom: 40px;
     opacity: 0.9;
-
-
     a{
       color: white;
     }
+
   }
+    .confir-btn:hover {
+      text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    }
 
 
 
