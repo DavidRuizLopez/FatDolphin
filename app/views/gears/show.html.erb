@@ -72,6 +72,7 @@
         <%= simple_form_for [@gear, @rent], method: :post do |t| %>
         <%= t.input :check_in  , as: :string, input_html: { id: "start_date" } %>
         <%= t.input :check_out, as: :string, input_html: { id: "end_date"} %>
+
         <p class="border-bottom"><strong>Payment details</strong></p>
         <p><%= @gear.price %> EUR x <span id="days">0</span> day(s)</p>
         <div class="d-flex justify-content-between">
@@ -79,6 +80,7 @@
           <p><strong><span id="total-price">0</span> EUR</strong></p>
         </div>
         <%= t.submit "Request to rent", class: "btn btn-primary btn-block" %>
+
         <% end %>
         <br>
         <p class="text-center">You won’t be charged yet</p>
