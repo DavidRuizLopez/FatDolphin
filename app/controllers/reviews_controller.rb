@@ -15,7 +15,7 @@ class ReviewsController < ApplicationController
     @review.gear = @gear
     @review.user = current_user
     if @review.save
-      redirect_to dashboard_path
+      redirect_to gear_path(@gear)
     else
       render :new
     end
