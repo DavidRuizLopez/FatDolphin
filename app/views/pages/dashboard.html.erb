@@ -1,9 +1,12 @@
 
 
 <!-- show my gear  -->
-<h3>Check how your gear is doing!</h3>
+<div class="container">
+
+<h5 class="text-center pb-2 border-bottom">Check how your gear is doing!</h5>
+<h5 class="text-center pb-2">Listed Gear</h5>
 <div class="card-gear">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 justify-content-center border-bottom border-top" >
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 justify-content-center border-bottom pb-3" >
         <% @user.gears.each do |gear| %>
               <%= link_to gear_path(gear) do %>
               <div class="card-trip m-3">
@@ -13,8 +16,8 @@
                   <img class="card-img-top" src="https://images.unsplash.com/photo-1518353053542-7ea33d942319?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" alt="Card image cap">
                 <% end %>
                 <div class="card-trip-infos">
-                  <h6 class="card-title"> <%= gear.name %> </h6>
-                  <h2 class="card-trip-pricing">€<%= gear.price %> </h2>
+                  <p class="card-title"> <%= gear.name %> </p>
+
                   <% if gear.available == true %>
                     <p>available</p>
                   <% else %>
@@ -25,22 +28,40 @@
               <% end %>
         <% end %>
       </div>
-
-    </div>
-
+</div>
 <!-- End of my gear -->
 
 <!-- Show the gear currently hiring -->
-  <% @rents.each do |rent|  %>
-    <%= rent.gear.name %>
-  <% end %>
-   <% @gears.each do |gear|  %>
-    <%= gear.name %>
-  <% end %>
+<div class="border-bottom">
+  <h5 class="text-center py-2">Your listed and rented gear</h5>
+  <div class="card-gear">
+    <% @rents.each do |rent|  %>
+        <p><%= rent.gear.name %></p>
+    <% end %>
+  </div>
+</div>
+<div class="border-bottom mb-5 pb-3">
+    <h5 class="text-center py-2">Borowed gear</h5>
+  <% @gears.each do |gear|  %>
+    <% gear.rents.each do |rent| %>
+      <p><%= gear.name %></p>
+      <% if rent.request == false %>
+        <%= simple_form_for [gear, rent], method: :patch do |t| %>
+          <%= t.input :request, as: :hidden, html: { value: true }  %>
+          <%= t.submit "Accept" %>
+        <% end %>
 
-<h3>View the gear you are currently hiring!</h3>
-<p>you like it?</p>
-<p>like this one</p>
-<p>or this one</p>
-<p>one more</p>
-<p>that's all</p>
+        <%= simple_form_for [gear, rent], method: :delete do |t| %>
+          <%= t.submit "Reject" %>
+        <% end %>
+      <% else %>
+        <p>Accepted</p>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+<!-- Show the gear you requested -->
+
+
+</div>
+<!-- END OF CONTAINER -->
