@@ -1,0 +1,6 @@
+<%= simple_form_for [@gear, @review] do |t| %>
+        <%= t.input :description %>
+        <%= t.input :rating %>
+
+        <%= t.submit "Add Review", class: "btn btn-primary btn-block" %>
+        <% end %>

@@ -2,6 +2,10 @@ import "bootstrap";
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/themes/airbnb.css';
 import rangePlugin from 'flatpickr/dist/plugins/rangePlugin';
+import 'mapbox-gl/dist/mapbox-gl.css';
+import { initMapbox } from '../plugins/init_mapbox';
+
+initMapbox();
 
 const fp = flatpickr("#start_date", {
   altInput: true,
