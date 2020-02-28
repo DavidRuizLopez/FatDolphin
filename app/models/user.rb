@@ -5,8 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :gears
-  has_many :rents
+  # has_many :rents
   has_many :reviews
-
+  has_many :rents
+  # has_many :rents, through: :gears
   validates :username, presence: true, uniqueness: true
 end

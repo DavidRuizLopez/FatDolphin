@@ -5,6 +5,9 @@ class PagesController < ApplicationController
 
   def dashboard
     @user = current_user
+    @gears = @user.gears.select { |gear| gear.rents.count >= 1 }
+    @rents = @user.rents
+    # @requests = @user.rents.select{ |rent| rent.request == true }
   end
 
   def confirmation
