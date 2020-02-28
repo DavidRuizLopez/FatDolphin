@@ -53,6 +53,11 @@
           <p class="my-0">January 2020</p>
         </div>
       </div>
+      <% @gear.reviews.each do |review| %>
+        <p><%= review.user.username %></p>
+        <p><%= review.description %></p>
+        <p><%= review.rating %></p>
+      <% end %>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum qui dolorem temporibus atque repudiandae, sapiente beatae tenetur sed impedit laborum cumque officiis, veniam dolore quod! Minus quasi nemo praesentium recusandae. Ab corporis ut repellendus numquam magni ipsum, ad quis placeat ipsa quia nostrum similique architecto optio maiores, pariatur repudiandae quos magnam hic qui debitis illum voluptatem sit! Possimus quidem ipsum, quae saepe at aspernatur eaque cupiditate quas necessitatibus.</p>
 
 
