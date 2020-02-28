@@ -1,0 +1,60 @@
+.confirmation {
+
+  margin: auto;
+  width: 50%;
+  border: 3px;
+  padding: 10px;
+  box-shadow: 0px 0px 11px -5px rgba(0,0,0,0.75);
+  margin-top: 20px;
+}
+
+.msg{
+  margin-top: 40px;
+  margin-bottom: 100px;
+
+  h3{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #FE4A49;
+    font-weight: 400;
+  }
+  p {
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .fas {
+    justify-content: center;
+    display: flex;
+    margin-bottom: 30px;
+    font-size: 88px;
+    color: #FE4A49;
+    opacity: 0.8;
+  }
+  .logo {
+    font-family: 'Amatic SC';
+    font-size: 20px;
+    color: #FE4A49;
+  }
+  .prof-link{
+    color: #FE4A49;
+  }
+}
+  .confir-btn {
+    background: #FE4A49;
+    /* text-decoration: none; */
+    padding: 8px;
+    width: 130px;
+    border-radius: 10px;
+    font-size: 14px;
+    shadow: 10px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+
+
+    a{
+      color: white;
+    }
+  }
+
+
+

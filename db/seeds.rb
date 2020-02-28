@@ -23,19 +23,19 @@ alán = User.create!(username: "The Boss", email: 'alan@gmail.com', password: '1
 granpepe = User.create(username: "Gran Pepe", email: "granpepe@gmail.com", password: "123456")
 
 file_1 = URI.open('https://www.bhphotovideo.com/images/images2500x2500/canon_1263c006_eos_80d_dslr_camera_1225877.jpg')
-gear_1 = Gear.create!(name: "Nikon Z6", price: 25, description: "Brand new, haven't used it yet.", category: "cameras", user: granpepe, address: "Berneticeva 22")
+gear_1 = Gear.create!(name: "Nikon Z6", price: 25, description: "Brand new, haven't used it yet.", category: "cameras", user: granpepe, address: "Plaza palmeras 6")
 gear_1.photo.attach(io: file_1, filename: 'nes.jpg', content_type: 'image/jpg')
 
-file_2 = URI.open("https://www.bhphotovideo.com/images/images2500x2500/canon_1263c006_eos_80d_dslr_camera_1225877.jpg")
-gear_2 = Gear.create!(name: "Nikon AF-S FX", price: 25, description: "Incredible, get it with my camera, they mix like peanut butter and jelly.", category: "lenses", user: granpepe, address: "Beblerjeva 4")
+file_2 = URI.open("https://http2.mlstatic.com/vendo-nikon-af-s-fx-nikkor-50mm-f18g-D_NQ_NP_907605-MLA29073417573_122018-F.jpg")
+gear_2 = Gear.create!(name: "Nikon AF-S FX", price: 25, description: "Incredible, get it with my camera, they mix like peanut butter and jelly.", category: "lenses", user: granpepe, address: "Plaza palmeras 6")
 gear_2.photo.attach(io: file_2, filename: 'nes.jpg', content_type: 'image/jpg')
 
 file_3 = URI.open("https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/12/2016/08/Novo-Explora-T10.jpg")
-gear_3 = Gear.create!(name: "Novo explora t5", price: 25, description: "Great stuff, trust me.", category: "tripods", user: granpepe, address: "Berneticeva 20")
+gear_3 = Gear.create!(name: "Novo explora t5", price: 25, description: "Great stuff, trust me.", category: "tripods", user: granpepe, address: "Plaza palmeras 6")
 gear_3.photo.attach(io: file_3, filename: 'nes.jpg', content_type: 'image/jpg')
 
 file_4 = URI.open("https://2.img-dpreview.com/files/p/articles/2697407899/dji-mavic-mini0348.jpeg")
-gear_4 = Gear.create!(name: "DJI Mavic Mini Foldable", price: 25, description: "Flies like a bird, great to spy on the neighbours.", category: "drones", user: granpepe, address: "Berneticeva 18")
+gear_4 = Gear.create!(name: "DJI Mavic Mini Foldable", price: 25, description: "Flies like a bird, great to spy on the neighbours.", category: "drones", user: granpepe, address: "Plaza palmeras 6")
 gear_4.photo.attach(io: file_4, filename: 'nes.jpeg', content_type: 'image/jpeg')
 
 
@@ -82,13 +82,13 @@ gear_11.photo.attach(io: file_11, filename: 'nes.jpg', content_type: 'image/jpg'
 
 
 
-# natalie = User.create(username: "Natalie", email: "natalie@gmail.com", password: "123456")
+natalie = User.create(username: "Natalie", email: "natalie@gmail.com", password: "123456")
 
-# file_12 = URI.open("https://static.bhphoto.com/images/images2500x2500/1382572231_1010691.jpg")
-# gear_12 = Gear.create!(name: "Manfrotto 190XPro4", price: 15, description: "This thing can hold an elephant!", category: "tripods", user: natalie)
-# gear_12.photo.attach(io: file_12, filename: 'nes.jpg', content_type: 'image/jpg')
+file_12 = URI.open("https://static.bhphoto.com/images/images2500x2500/1382572231_1010691.jpg")
+gear_12 = Gear.create!(name: "Manfrotto 190XPro4", price: 15, description: "This thing can hold an elephant!", category: "tripods", user: natalie, address: "Calle Embajadores")
+gear_12.photo.attach(io: file_12, filename: 'nes.jpg', content_type: 'image/jpg')
 
-# file_13 = URI.open("https://i1.wp.com/puntoracing.com/wp-content/uploads/2016/09/djimavicprofeat-800x420.jpg")
-# gear_13 = Gear.create!(name: "Mavic Pro 420", price: 45, description: "Best drone in the market, battery don't hold as much but image is great!.", category: "drones", user: natalie)
-# gear_13.photo.attach(io: file_13, filename: 'nes.jpg', content_type: 'image/jpg')
+file_13 = URI.open("https://i1.wp.com/puntoracing.com/wp-content/uploads/2016/09/djimavicprofeat-800x420.jpg")
+gear_13 = Gear.create!(name: "Mavic Pro 420", price: 45, description: "Best drone in the market, battery don't hold as much but image is great!.", category: "drones", user: natalie, address: "Calle Embajadores")
+gear_13.photo.attach(io: file_13, filename: 'nes.jpg', content_type: 'image/jpg')
 
