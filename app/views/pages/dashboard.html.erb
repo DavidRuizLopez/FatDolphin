@@ -31,6 +31,13 @@
 <!-- End of my gear -->
 
 <!-- Show the gear currently hiring -->
+  <% @rents.each do |rent|  %>
+    <%= rent.gear.name %>
+  <% end %>
+   <% @gears.each do |gear|  %>
+    <%= gear.name %>
+  <% end %>
+
 <h3>View the gear you are currently hiring!</h3>
 <p>you like it?</p>
 <p>like this one</p>
