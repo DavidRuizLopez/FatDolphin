@@ -67,14 +67,17 @@
     <!-- RIGHT SIDE PAYMENT DETAILS -->
     <div class="col-lg-4 col-sm-12">
       <div class="sticky-details border rounded p-4">
-        <p class="border-bottom"><span id="price"><%= @gear.price %></span> EUR / day</p>
+        <p class="border-bottom"><strong><span id="price"><%= @gear.price %></span> EUR</strong> / day</p>
         <p><strong>Dates</strong></p>
         <%= simple_form_for [@gear, @rent], method: :post do |t| %>
         <%= t.input :check_in  , as: :string, input_html: { id: "start_date" } %>
         <%= t.input :check_out, as: :string, input_html: { id: "end_date"} %>
-        <p><strong>Payment details</strong></p>
-        <p class="border-bottom"><%= @gear.price %> EUR x <span id="days">1</span> day</p>
-        <p class="border-bottom">Total: <span id="total-price">0</span> EUR</p>
+        <p class="border-bottom"><strong>Payment details</strong></p>
+        <p><%= @gear.price %> EUR x <span id="days">0</span> day(s)</p>
+        <div class="d-flex justify-content-between">
+          <p>Total:</p>
+          <p><strong><span id="total-price">0</span> EUR</strong></p>
+        </div>
         <%= t.submit "Request to rent", class: "btn btn-primary btn-block" %>
         <% end %>
         <br>

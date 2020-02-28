@@ -73,7 +73,7 @@ gear_9.photo.attach(io: file_9, filename: 'nes.jpg', content_type: 'image/jpg')
 charlotte = User.create(username: "Charlotte", email: "charlotte@gmail.com", password: "123456")
 
 file_10 = URI.open("https://images-na.ssl-images-amazon.com/images/I/81eSYgc0xNL._SX425_.jpg")
-gear_10 = Gear.create!(name: "Blackmagick poket cinema camera", price: 30, description: "I use it all the time! great image and everything works!.", category: "cameras", user: charlotte, address: "Calle Juan de Mariana")
+gear_10 = Gear.create!(name: "Blackmagic poket", price: 30, description: "I use it all the time! great image and everything works!.", category: "cameras", user: charlotte, address: "Calle Juan de Mariana")
 gear_10.photo.attach(io: file_10, filename: 'nes.jpg', content_type: 'image/jpg')
 
 file_11 = URI.open("https://i.ytimg.com/vi/qi8qre9FO18/maxresdefault.jpg")

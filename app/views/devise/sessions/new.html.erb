@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row d-flex justify-content-center my-5 py-5 login-box">
     <div class="col-md-6 border rounded py-4 px-5 shadow">
-      <h4 class="text-center mb-4">Log in</h2>
+      <h4 class="text-center mb-4">Log in</h4>
 
       <%= simple_form_for(resource, html: { class: 'form-horizontal' }, wrapper: :horizontal_form, as: resource_name, url: session_path(resource_name)) do |f| %>
         <%= f.input :email,
