@@ -1,5 +1,6 @@
 # require 'faker'
-
+Rent.destroy_all
+Review.destroy_all
 Gear.destroy_all
 User.destroy_all
 
